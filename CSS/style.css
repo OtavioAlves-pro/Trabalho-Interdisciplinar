@@ -83,7 +83,7 @@ footer ul {
   padding-left: 20px;
   margin: 5px 0 0 0;
 }
-/* Fotos dos professores alinhadas e redondas */
+
 .professores-container {
   display: flex;
   justify-content: center;
@@ -100,4 +100,25 @@ footer ul {
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.elemento-imagem-container {
+  text-align: center;
+  margin: 15px 0 20px 0;
+}
+
+.elemento-imagem-container img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.legenda-imagem {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 5px;
+  font-style: italic;
 }
