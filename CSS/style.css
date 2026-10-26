@@ -68,17 +68,16 @@ h2 {
 }
 
 .elemento-card img {
-  width: 100%;
-  max-width: 240px;
-  height: auto; /* Deixa a altura automática para mostrar a foto inteira sem cortar */
-  object-fit: contain; /* Garante que toda a imagem seja exibida */
+  width: 100% !important;
+  max-width: 250px !important;
+  height: auto !important;
+  object-fit: contain !important;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
   display: block;
   margin: 0 auto;
 }
-
 .elemento-card figcaption {
   font-size: 0.8rem;
   color: #64748b;
