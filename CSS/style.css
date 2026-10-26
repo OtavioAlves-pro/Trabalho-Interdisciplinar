@@ -4,14 +4,14 @@ body {
   color: #333;
   background-color: #f4f6f8;
   margin: 0;
-  padding: 20px;
+  padding: 15px;
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   background: #fff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
@@ -26,7 +26,7 @@ header {
 h1 {
   margin: 0 0 5px 0;
   color: #1e293b;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 
 header p {
@@ -37,37 +37,45 @@ header p {
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #1e293b;
   margin-top: 30px;
   border-bottom: 2px solid #f1f5f9;
   padding-bottom: 8px;
 }
 
-/* --- Layout da Seção Características (Imagem + Tabela Lado a Lado) --- */
+/* --- Correção da Imagem e Tabela (Layout Responsivo) --- */
 .caracteristicas-grid {
   display: flex;
-  gap: 25px;
+  flex-direction: column; /* No telemóvel fica um em cima do outro de forma limpa */
   align-items: center;
+  gap: 20px;
   margin-top: 15px;
-  flex-wrap: wrap; /* Para se adaptar no celular */
+}
+
+@media (min-width: 768px) {
+  .caracteristicas-grid {
+    flex-direction: row; /* Lado a lado apenas em telas maiores (PC) */
+    align-items: flex-start;
+  }
 }
 
 .elemento-card {
   margin: 0;
-  flex: 1;
-  min-width: 200px;
+  width: 100%;
+  max-width: 240px;
   text-align: center;
 }
 
 .elemento-card img {
   width: 100%;
-  max-width: 220px;
-  height: 200px;
+  height: 160px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #e2e8f0;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: block;
+  margin: 0 auto;
 }
 
 .elemento-card figcaption {
@@ -78,25 +86,24 @@ h2 {
 }
 
 .tabela-dados {
-  flex: 2;
-  min-width: 280px;
   width: 100%;
   border-collapse: collapse;
+  flex: 1;
 }
 
 .tabela-dados th {
   background-color: #f8fafc;
   color: #334155;
   text-align: left;
-  padding: 10px;
+  padding: 8px;
   border-bottom: 2px solid #cbd5e1;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .tabela-dados td {
-  padding: 10px;
+  padding: 8px;
   border-bottom: 1px solid #f1f5f9;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 /* --- Seção de Riscos / Alerta --- */
@@ -118,8 +125,9 @@ h2 {
 .professores-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .professor-card {
@@ -128,8 +136,8 @@ h2 {
 }
 
 .professor-card img {
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #e2e8f0;
@@ -137,10 +145,10 @@ h2 {
 }
 
 .professor-card figcaption {
-  margin-top: 8px;
+  margin-top: 6px;
   font-weight: 600;
   color: #475569;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 /* --- Rodapé / Fontes --- */
@@ -154,7 +162,7 @@ footer {
 
 footer h3 {
   margin: 0 0 10px 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #334155;
 }
 
